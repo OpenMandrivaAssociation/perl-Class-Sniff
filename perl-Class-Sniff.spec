@@ -1,17 +1,18 @@
 %define upstream_name    Class-Sniff
-%define upstream_version 0.08
+%define upstream_version 0.09
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	Look for class composition code smells
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Class/Class-Sniff-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
+BuildRequires: perl(Sub::Identify)
 BuildRequires:	perl(B::Concise)
 BuildRequires:	perl(Devel::Symdump)
 BuildRequires:	perl(Digest::MD5)
@@ -55,6 +56,8 @@ perl Makefile.PL INSTALLDIRS=vendor
 %doc Changes README
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
+%{_bindir}/csniff
+%{_mandir}/man1/csniff.1.xz
 
 %changelog
 * Mon Apr 18 2011 Funda Wang <fwang@mandriva.org> 0.80.0-2mdv2011.0
@@ -68,3 +71,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Mon Sep 21 2009 cpan2dist 0.08-1mdv
 - initial mdv release, generated with cpan2dist
+
