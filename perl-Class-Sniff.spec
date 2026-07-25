@@ -2,14 +2,14 @@
 %define upstream_version 0.10
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	Look for class composition code smells
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Class-Sniff
+Source0:	https://cpan.metacpan.org/authors/id/N/NE/NEILB/Class-Sniff-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
